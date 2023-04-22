@@ -5,7 +5,6 @@ import useTakePicture from "./hooks/useTakePicture";
 
 function App() {
   const [stream, setStream] = useState(null);
-  // const [flash, setFlash] = useState(false);
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const [takePicture, flash] = useTakePicture(videoRef, canvasRef);
@@ -15,7 +14,9 @@ function App() {
       .getUserMedia({ video: true })
       .then((stream) => {
         setStream(stream);
-        videoRef.current.srcObject = stream;
+        if (videoRef.current) {
+          videoRef.current.srcObject = stream;
+        };
       })
       .catch((error) => {
         console.error(error);
