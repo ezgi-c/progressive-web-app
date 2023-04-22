@@ -7,12 +7,12 @@ This is a 2-session assignment, after which you will live-demo your mobile app t
 ## Lab/Coding Session #1
 
 - Create an installable PWA,
-- and use one additional web technology
+- ❓ use one additional web technology
 
 ### Requirements
 
-- Use at least 1 "native" device feature (Contacts, Camera, GPS, etc)
-- High Fidelity Styling and UX
+- ✅ Use at least 1 "native" device feature (Contacts, Camera, GPS, etc)
+- ✅ High Fidelity Styling and UX
   - Good starting points:
     - Pico CSS
     - Jiffies CSS
@@ -21,5 +21,5 @@ This is a 2-session assignment, after which you will live-demo your mobile app t
 ### Milestone 1 - MVP (This Lab)
 
 - PWA Installable
-- Accesses a device feature
-- Responsive layout
+- ✅ Accesses a device feature
+- ✅ Responsive layout

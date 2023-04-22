@@ -1,24 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import { useEffect, useState, useRef } from "react";
+import CameraFeed from "./Components/CameraFeed";
+import useTakePicture from "./hooks/useTakePicture";
 
 function App() {
+  const [stream, setStream] = useState(null);
+  // const [flash, setFlash] = useState(false);
+  const videoRef = useRef(null);
+  const canvasRef = useRef(null);
+  const [takePicture, flash] = useTakePicture(videoRef, canvasRef);
+
+  useEffect(() => {
+    navigator.mediaDevices
+      .getUserMedia({ video: true })
+      .then((stream) => {
+        setStream(stream);
+        videoRef.current.srcObject = stream;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className={`App ${flash ? "flash" : ""}`}>
+        <header className="header">
+          <h1 className="h1">Take a Picture</h1>
+        </header>
+        <div className="video-container">
+          <CameraFeed
+            stream={stream}
+            videoRef={videoRef}
+            canvasRef={canvasRef}
+          />
+          <button
+            className="take-picture"
+            title="Click to take a picture!"
+            onClick={takePicture}
+          >
+            Take a Picture 📸
+          </button>
+        </div>
+      </div>
+    </>
   );
 }
 
