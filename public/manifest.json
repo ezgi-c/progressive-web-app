@@ -3,12 +3,12 @@
     "name": "PWA Camera",
     "icons": [
       {
-        "src": "public/camera-icon(s).png",
+        "src": "camera-icon(s).png",
         "type": "image/png",
         "sizes": "128x128"
       },
       {
-        "src": "public/camera-icon(l).png",
+        "src": "camera-icon(l).png",
         "type": "image/png",
         "sizes": "512x512"
       }
