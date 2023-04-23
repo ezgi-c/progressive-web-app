@@ -17,6 +17,11 @@
     "display": "standalone",
     "theme_color": "#008080",
     "background_color": "#000000",
-    "scope": "/"
+    "scope": "https://pwa-takeapicture.netlify.app/",
+    "serviceworker": {
+      "src": "/service-worker.js",
+      "scope": "https://pwa-takeapicture.netlify.app/",
+      "type": "module"
+    }
   }
   
