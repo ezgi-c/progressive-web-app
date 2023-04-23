@@ -3,12 +3,11 @@ const filesToCache = [
   "/",
   "/index.html",
   "/manifest.json",
-  "/logo192.png",
-  "/logo512.png",
-  "/favicon.ico",
+  "/camera-icon(l).png",
+  "/camera-icon(s).png",
 ];
 
-self.addEventListener("install", (e) => {
+this.addEventListener("install", (e) => {
   e.waitUntil(
     caches.open(cacheName).then((cache) => {
       return cache.addAll(filesToCache);
@@ -16,7 +15,7 @@ self.addEventListener("install", (e) => {
   );
 });
 
-self.addEventListener("fetch", (e) => {
+this.addEventListener("fetch", (e) => {
   e.respondWith(
     caches.match(e.request).then((response) => {
       return response || fetch(e.request);
