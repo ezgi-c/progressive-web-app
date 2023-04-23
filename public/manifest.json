@@ -1,6 +1,6 @@
 {
-    "short_name": "PWA",
-    "name": "Progressive Web App",
+    "short_name": "PWA Camera",
+    "name": "PWA Camera",
     "icons": [
       {
         "src": "public/camera-icon(s).png",
