@@ -13,11 +13,11 @@
         "sizes": "512x512"
       }
     ],
-    "start_url": "/",
+    "start_url": "/index.html",
     "display": "standalone",
     "theme_color": "#008080",
     "background_color": "#000000",
-    "scope": "https://pwa-takeapicture.netlify.app/",
+    "scope": "/index.html",
     "serviceworker": {
       "src": "/service-worker.js",
       "scope": "https://pwa-takeapicture.netlify.app/",

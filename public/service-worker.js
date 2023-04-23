@@ -1,10 +1,10 @@
 const cacheName = "my-pwa-cache-v1";
 const filesToCache = [
   "/",
-  "/index.html",
-  "/manifest.json",
-  "/camera-icon(l).png",
-  "/camera-icon(s).png",
+  "/public/index.html",
+  "/public/manifest.json",
+  "/public/camera-icon(l).png",
+  "/public/camera-icon(s).png",
 ];
 
 this.addEventListener("install", (e) => {
