@@ -1,17 +1,16 @@
 const cacheName = "my-pwa-cache-v1";
-const filesToCache = [
-  "/",
-  "/public/index.html",
-  "/public/manifest.json",
-  "/public/camera-icon(l).png",
-  "/public/camera-icon(s).png",
-];
+const filesToCache = ["index.html"];
 
 this.addEventListener("install", (e) => {
   e.waitUntil(
-    caches.open(cacheName).then((cache) => {
-      return cache.addAll(filesToCache);
-    })
+    caches
+      .open(cacheName)
+      .then((cache) => {
+        return cache.addAll(filesToCache);
+      })
+      .catch((error) => {
+        console.error("Failed to add files to cache:", error);
+      })
   );
 });
 
