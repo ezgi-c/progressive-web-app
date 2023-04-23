@@ -1,0 +1,21 @@
+{
+  "short_name": "PWA",
+  "name": "Progressive Web App",
+  "icons": [
+    {
+      "src": "public/camera-icon(s).png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "public/camera-icon(l).png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#008080",
+  "background_color": "#000000",
+  "scope": "/"
+}
