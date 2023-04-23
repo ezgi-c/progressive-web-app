@@ -1,6 +1,6 @@
 {
   "name": "progressive-web-app",
-  "homepage": ".",
+  "homepage": "https://pwa-takeapicture.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
