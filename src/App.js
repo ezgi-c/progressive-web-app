@@ -14,9 +14,8 @@ function App() {
       .getUserMedia({ video: true })
       .then((stream) => {
         setStream(stream);
-        if (videoRef.current) {
-          videoRef.current.srcObject = stream;
-        };
+
+        videoRef.current.srcObject = stream;
       })
       .catch((error) => {
         console.error(error);
