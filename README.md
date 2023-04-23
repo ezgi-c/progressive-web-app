@@ -16,10 +16,10 @@ This is a 2-session assignment, after which you will live-demo your mobile app t
   - Good starting points:
     - Pico CSS
     - Jiffies CSS
-- Installable on mobile or web
+- ✅ Installable on mobile or web
 
 ### Milestone 1 - MVP (This Lab)
 
-- PWA Installable
-- ✅ Accesses a device feature
+- ✅ PWA Installable
+- ❓ Accesses a device feature (only works on localhost)
 - ✅ Responsive layout
