@@ -26,7 +26,7 @@ function useTakePicture(videoRef, canvasRef) {
       setFlash(true);
       setTimeout(() => {
         setFlash(false);
-      }, 500);
+      }, 2000);
     }
   };
 
