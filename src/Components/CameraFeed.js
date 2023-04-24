@@ -16,6 +16,7 @@ function CameraFeed({ setFlash }) {
       .catch((error) => {
         console.error(error);
       });
+    // eslint-disable-next-line
   }, []);
 
   return (
