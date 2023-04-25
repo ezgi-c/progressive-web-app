@@ -4,7 +4,7 @@
 
 .header {
   color: white;
-  font-size: 3vw;
+  font-size: 2vw;
   padding: 1vw;
   background-color: teal;
   width: 100vw;
@@ -15,40 +15,50 @@
   width: 100vw;
 }
 
-.video-container {
+.video-container, .preview-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 3vw;
-  margin: 3vw auto;
+  height: 60vh;
+  padding: 4vw;
 }
 
-.video {
+.video, .preview-image {
   transform: scaleX(-1);
-  width: 60vw;
   border: solid 1.5vw white;
-  border-radius: 0.5vw;
+  border-radius: 2px;
   box-shadow: slategrey -1vw 1vw 1vw;
 }
 
-.take-picture {
-  font-size: 3vw;
-  padding: 2vw;
+button {
+  font-size: 2vw;
+  padding: 1vw;
   border-radius: 1vw;
   transition: all ease-in-out 0.2s;
   cursor: pointer;
+  background-color: teal;
 }
 
-.take-picture:hover {
-  background-color: teal;
-  color: white;
-  font-weight: bold;
+button:hover {
+  background-color: #00a5a5;
+}
+
+button:active {
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 .flash {
   animation: flash 2s;
   background-color: white;
+}
+
+
+.countdown {
+  color: white;
+  font-size: 3vw;
 }
 
 @keyframes flash {
