@@ -6,7 +6,7 @@ This is a 2-session assignment, after which you will live-demo your mobile app t
 
 ## Lab/Coding Session #1
 
-- Create an installable PWA,
+- ✅ Create an installable PWA,
 - ❓ use one additional web technology
 
 ### Requirements
@@ -20,6 +20,6 @@ This is a 2-session assignment, after which you will live-demo your mobile app t
 
 ### Milestone 1 - MVP (This Lab)
 
-- ❓ PWA Installable (works on safari on mobile, not on chrome)
-- ❓ Accesses a device feature (only works on localhost)
+- ✅ PWA Installable (works on safari on mobile, not on chrome)
+- ✅ Accesses a device feature (only works on localhost)
 - ✅ Responsive layout
