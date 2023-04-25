@@ -21,5 +21,5 @@ This is a 2-session assignment, after which you will live-demo your mobile app t
 ### Milestone 1 - MVP (This Lab)
 
 - ✅ PWA Installable (works on safari on mobile, not on chrome)
-- ✅ Accesses a device feature (only works on localhost)
+- ✅ Accesses a device feature
 - ✅ Responsive layout
