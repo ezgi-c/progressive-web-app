@@ -1,21 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap");
+
 .App {
-  background-color: #34ee0f;
+  background-color: #474073;
 }
 
 .header {
   color: white;
   font-size: 2vw;
   padding: 1vw;
-  background-color: teal;
+  background-image: url("../public/drop-light-abstract-night-photography-play-630759-pxhere.com.jpg");
+  background-size: 100%;
+  background-position: center;
   width: 100vw;
-  font-family: "Font Name", sans-serif;
+  font-family: "Shantell Sans", cursive;
 }
 
 .h1 {
   width: 100vw;
 }
 
-.video-container, .preview-container {
+.video-container,
+.preview-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -25,11 +30,11 @@
   padding: 4vw;
 }
 
-.video, .preview-image {
+.video,
+.preview-image {
   transform: scaleX(-1);
   border: solid 1.5vw white;
-  border-radius: 2px;
-  box-shadow: slategrey -1vw 1vw 1vw;
+  border-radius: 3px;
 }
 
 button {
@@ -38,11 +43,11 @@ button {
   border-radius: 1vw;
   transition: all ease-in-out 0.2s;
   cursor: pointer;
-  background-color: teal;
+  background-color: #63c4a8;
 }
 
 button:hover {
-  background-color: #00a5a5;
+  background-color: #7aefce;
 }
 
 button:active {
@@ -54,7 +59,6 @@ button:active {
   animation: flash 2s;
   background-color: white;
 }
-
 
 .countdown {
   color: white;
