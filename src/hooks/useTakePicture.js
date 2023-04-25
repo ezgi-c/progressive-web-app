@@ -1,4 +1,4 @@
-function useTakePicture(videoRef, canvasRef, setFlash) {
+const useTakePicture = (videoRef, canvasRef, setFlash, setPreviewImage) => {
   const takePicture = () => {
     if (videoRef.current && canvasRef.current) {
       // Set canvas dimensions to match video dimensions
@@ -11,21 +11,25 @@ function useTakePicture(videoRef, canvasRef, setFlash) {
       const context = canvasRef.current.getContext("2d");
       context.drawImage(videoRef.current, 0, 0, videoWidth, videoHeight);
 
-      // Convert canvas to data URL and download as a file
+      // Convert canvas to data URL and set as preview image
       const dataUrl = canvasRef.current.toDataURL("image/png");
-      const a = document.createElement("a");
-      a.href = dataUrl;
-      a.download = "photo.png";
-      a.click();
+      setPreviewImage(dataUrl);
 
       // Trigger the flash animation
       setFlash(true);
+
+      // Set the body background color to white
+      document.body.style.backgroundColor = "white";
+
       setTimeout(() => {
         setFlash(false);
-      }, 2000);
+        // Reset the body background color
+        document.body.style.backgroundColor = "";
+      }, 100);
     }
   };
+
   return { takePicture };
-}
+};
 
 export default useTakePicture;

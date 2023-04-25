@@ -15,7 +15,7 @@
   width: 100vw;
 }
 
-.video-container {
+.video-container, .preview-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -25,7 +25,7 @@
   padding: 4vw;
 }
 
-.video {
+.video, .preview-image {
   transform: scaleX(-1);
   border: solid 1.5vw white;
   border-radius: 2px;
@@ -54,6 +54,7 @@ button:active {
   animation: flash 2s;
   background-color: white;
 }
+
 
 .countdown {
   color: white;
