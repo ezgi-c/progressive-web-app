@@ -3,19 +3,19 @@
     "name": "PWA Camera",
     "icons": [
       {
-        "src": "camera-icon(s).png",
+        "src": "camera-icon.png",
         "type": "image/png",
         "sizes": "128x128"
       },
       {
-        "src": "camera-icon(l).png",
+        "src": "camera-icon.png",
         "type": "image/png",
         "sizes": "512x512"
       }
     ],
     "start_url": ".",
     "display": "standalone",
-    "theme_color": "#008080",
-    "background_color": "#000000"
+    "theme_color": "#63c4a8",
+    "background_color": "#474073"
   }
   

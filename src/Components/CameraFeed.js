@@ -47,14 +47,14 @@ function CameraFeed({ setFlash }) {
           title="Click to take a picture!"
           onClick={startCountdown}
         >
-          Take a Picture 📸
+          click to take a picture 📸
         </button>
       )}
       {previewImage && (
         <div className="preview-container">
           <img className="preview-image" src={previewImage} alt="Preview" />
           <button className="preview-button" onClick={() => setPreviewImage(null)}>
-            Retake
+            retake
           </button>
         </div>
       )}
