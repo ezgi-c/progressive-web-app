@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-function useTakePicture(videoRef, canvasRef) {
-  const [flash, setFlash] = useState(false);
-
+function useTakePicture(videoRef, canvasRef, setFlash) {
   const takePicture = () => {
     if (videoRef.current && canvasRef.current) {
       // Set canvas dimensions to match video dimensions
@@ -29,8 +25,7 @@ function useTakePicture(videoRef, canvasRef) {
       }, 2000);
     }
   };
-
-  return [takePicture, flash];
+  return { takePicture };
 }
 
 export default useTakePicture;
