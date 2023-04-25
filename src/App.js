@@ -10,7 +10,7 @@ function App() {
       <div className={`App ${flash ? "flash" : ""}`}>
         <header className="header">
           <h1 className="h1" testid="h1">
-            Take a Picture
+          <img className="icon" src="camera-icon.png" alt="camera icon" />Take a Picture
           </h1>
         </header>
         <CameraFeed setFlash={setFlash} />

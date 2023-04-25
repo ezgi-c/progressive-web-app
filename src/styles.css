@@ -17,6 +17,12 @@
 
 .h1 {
   width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  height: 2em;
 }
 
 .video-container,
@@ -34,7 +40,7 @@
 .preview-image {
   transform: scaleX(-1);
   border: solid 1.5vw white;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 button {
@@ -63,6 +69,8 @@ button:active {
 .countdown {
   color: white;
   font-size: 3vw;
+  font-family: "Shantell Sans", cursive;
+
 }
 
 @keyframes flash {
