@@ -1,8 +1,11 @@
 import { useEffect, useRef } from "react";
+import useTakePicture from "../hooks/useTakePicture";
 
 function CameraFeed({ setFlash }) {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
+
+  const { takePicture } = useTakePicture(videoRef, canvasRef, setFlash);
 
   useEffect(() => {
     navigator.mediaDevices
@@ -11,7 +14,6 @@ function CameraFeed({ setFlash }) {
         if (videoRef.current) {
           videoRef.current.srcObject = stream;
         }
-        setFlash(false);
       })
       .catch((error) => {
         console.error(error);
@@ -23,6 +25,13 @@ function CameraFeed({ setFlash }) {
     <div className="video-container">
       <video ref={videoRef} autoPlay muted className="video"></video>
       <canvas ref={canvasRef} style={{ display: "none" }}></canvas>
+      <button
+        className="take-picture"
+        title="Click to take a picture!"
+        onClick={takePicture}
+      >
+        Take a Picture 📸
+      </button>
     </div>
   );
 }
