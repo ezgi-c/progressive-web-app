@@ -70,7 +70,6 @@ button:active {
   color: white;
   font-size: 3vw;
   font-family: "Shantell Sans", cursive;
-
 }
 
 @keyframes flash {
@@ -88,7 +87,7 @@ button:active {
     padding: 0.5em;
   }
   .video {
-    width: 90vw;
+    width: 80vw;
     border-width: 0.5em;
   }
   .take-picture {

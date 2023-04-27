@@ -7,7 +7,12 @@ function CameraFeed({ setFlash }) {
   const [countdown, setCountdown] = useState(null);
   const [previewImage, setPreviewImage] = useState(null);
 
-  const { takePicture } = useTakePicture(videoRef, canvasRef, setFlash, setPreviewImage);
+  const { takePicture } = useTakePicture(
+    videoRef,
+    canvasRef,
+    setFlash,
+    setPreviewImage
+  );
 
   useEffect(() => {
     navigator.mediaDevices
@@ -52,8 +57,17 @@ function CameraFeed({ setFlash }) {
       )}
       {previewImage && (
         <div className="preview-container">
-          <img className="preview-image" src={previewImage} alt="Preview" />
-          <button className="preview-button" onClick={() => setPreviewImage(null)}>
+          <img
+            className="preview-image"
+            src={previewImage}
+            alt="Preview"
+            width={videoRef.current.videoWidth}
+            height={videoRef.current.videoHeight}
+          />
+          <button
+            className="preview-button"
+            onClick={() => setPreviewImage(null)}
+          >
             retake
           </button>
         </div>
