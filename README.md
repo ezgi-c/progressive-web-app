@@ -4,9 +4,9 @@ __Lab/Coding Session #2 -__ Finish adding the web technology, have a responsive 
 
 ## Milestone 2 - App!  (This Lab)
 
-- PWA has an icon
-- Service Worker & Cache for offline functionality
-- Mobile and desktop design
+- ✅ PWA has an icon
+- ✅ Service Worker & Cache for offline functionality
+- ✅ Mobile and desktop design
 
 
 <!-- # Lab: Class 41
