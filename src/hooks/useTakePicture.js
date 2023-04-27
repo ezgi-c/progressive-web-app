@@ -10,17 +10,14 @@ const useTakePicture = (videoRef, canvasRef, setFlash, setPreviewImage) => {
       // Draw video frame to canvas
       const context = canvasRef.current.getContext("2d");
       context.drawImage(videoRef.current, 0, 0, videoWidth, videoHeight);
-
       // Convert canvas to data URL and set as preview image
       const dataUrl = canvasRef.current.toDataURL("image/png");
       setPreviewImage(dataUrl);
 
       // Trigger the flash animation
       setFlash(true);
-
       // Set the body background color to white
       document.body.style.backgroundColor = "white";
-
       setTimeout(() => {
         setFlash(false);
         // Reset the body background color
@@ -28,7 +25,6 @@ const useTakePicture = (videoRef, canvasRef, setFlash, setPreviewImage) => {
       }, 100);
     }
   };
-
   return { takePicture };
 };
 
